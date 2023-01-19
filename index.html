@@ -2,31 +2,47 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>aprenda-a-programar</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>aprenda-a-programar</title>
 </head>
 
 <body>
 
-    <script>
-		function arredondar (valor) {
-			return Math.round(valor*100)/100
+	<script>
+
+		let numbers = [1, 2, 3]
+
+		function mapNumbers() {
+			numbers.map((number) => console.log(number))
 		}
 
-		function calcularJuros (valor) {
+		function forEachNumbers() {
+			numbers.forEach((valor, index) => console.log(valor, index))
+		}
+
+		forEachNumbers()
+		 mapNumbers()
+
+
+
+		function arredondar(valor) {
+			return Math.round(valor * 100) / 100
+		}
+
+		function calcularJuros(valor) {
 			juros = arredondar(valor * 0.1)
 			return juros
 		}
-		
-		function calcularRendimentos (valor) {
+
+		function calcularRendimentos(valor) {
 			rendimentos = arredondar(valor * 0.005)
 			console.log(rendimentos)
 			return rendimentos
 		}
 
-		function calcularSaldo (mes, saldoInicial, salario, aluguel, contaDeAgua, contaDeLuz, internet, transporte, lazer, alimentacao) {
+		function calcularSaldo(mes, saldoInicial, salario, aluguel, contaDeAgua, contaDeLuz, internet, transporte, lazer, alimentacao) {
 			console.log(mes)
 			saldo = saldoInicial + salario - aluguel - contaDeAgua - contaDeLuz - internet - transporte - lazer - alimentacao
 			estaNegativo = saldo < 0
